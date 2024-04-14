@@ -15,40 +15,32 @@ import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
 const items = [
   {
     icon: <SettingsSuggestRoundedIcon />,
-    title: 'Adaptable performance',
+    title: 'Nos adaptamos a ti',
     description:
-      'Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.',
-  },
+      'Descubre un producto que se ajusta a tus necesidades, ofreciéndote la flexibilidad que buscas.',},
   {
     icon: <ConstructionRoundedIcon />,
-    title: 'Built to last',
+    title: 'La mejor experiencia de usuario',
     description:
-      'Experience unmatched durability that goes above and beyond with lasting investment.',
+    'Descubre una web moderna y fácil de usar, con una interfaz intuitiva y sencilla.',
   },
   {
     icon: <ThumbUpAltRoundedIcon />,
-    title: 'Great user experience',
+    title: 'Precisión en cada detalle',
     description:
-      'Integrate our product into your routine with an intuitive and easy-to-use interface.',
-  },
+    'Realizamos nuestros trabajos con la maxima profesionalidad'  },
   {
     icon: <AutoFixHighRoundedIcon />,
-    title: 'Innovative functionality',
+    title: 'Gestiona las contrataciones de manera facil',
     description:
-      'Stay ahead with features that set new standards, addressing your evolving needs better than the rest.',
-  },
+      'Gestiona tus contrataciones de manera sencilla y eficaz, con un sistema de contratación seguro y fiable.',},
   {
     icon: <SupportAgentRoundedIcon />,
-    title: 'Reliable support',
+    title: 'Apoyo fiable',
     description:
-      'Count on our responsive customer support, offering assistance that goes beyond the purchase.',
-  },
-  {
-    icon: <QueryStatsRoundedIcon />,
-    title: 'Precision in every detail',
-    description:
-      'Enjoy a meticulously crafted product where small touches make a significant impact on your overall experience.',
-  },
+
+      'Disfruta de un soporte al cliente fiable y eficaz, que te ayudará a resolver cualquier problema que puedas tener.',},
+   
 ];
 
 export default function Highlights() {
@@ -78,12 +70,10 @@ export default function Highlights() {
           }}
         >
           <Typography component="h2" variant="h4">
-            Highlights
+            Lo que nos hace destacar
           </Typography>
           <Typography variant="body1" sx={{ color: 'grey.400' }}>
-            Explore why our product stands out: adaptability, durability,
-            user-friendly design, and innovation. Enjoy reliable customer support and
-            precision in every detail.
+            Explora las características que hacen de nuestra plataforma la mejor: desde la flexibilidad, la facilidad de uso y la precisión en cada detalle, hasta el soporte al cliente fiable y eficaz.
           </Typography>
         </Box>
         <Grid container spacing={2.5}>

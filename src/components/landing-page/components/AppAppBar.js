@@ -1,8 +1,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
+import { GoogleLogin, GoogleOAuthProvider,googleLogout } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
+import { postClientes,getEmpleados } from '../../../utils/apicalls';
 
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
@@ -38,7 +39,31 @@ function AppAppBar({ mode, toggleColorMode }) {
         var name=jwtDecode(res.credential).name;
         sessionStorage.setItem('email', email);
         sessionStorage.setItem('name', name);
+        //parte logica de la comprobacion de si es empleado o cliente
+       /* getEmpleados(email)
+          .then((response) => {
+            if (response.status === 500) 
+              cerrarSesion();
+             else if (response.status === 200) 
+              // Es un empleado
+              navigate("/HomeEmpleados");
+             else {
+              postClientes(email).then((response) => {
+                if (response.status === 500) 
+                  cerrarSesion();
+                 else 
+                  // Es un cliente
+                  navigate("/HomeClientes");
+                
+              });
+            }
+          });*/
         navigate("/HomeClientes");
+    }
+    const cerrarSesion = () => {
+      googleLogout();
+      sessionStorage.clear();
+      navigate("/");
     }
     const onEror=()=>{
         console.log("error");
@@ -94,14 +119,7 @@ function AppAppBar({ mode, toggleColorMode }) {
               >
                 Features
               </Button>
-              <Button
-                variant="text"
-                color="info"
-                size="small"
-                onClick={() => scrollToSection('testimonials')}
-              >
-                Testimonials
-              </Button>
+              
               <Button
                 variant="text"
                 color="info"
@@ -110,14 +128,7 @@ function AppAppBar({ mode, toggleColorMode }) {
               >
                 Highlights
               </Button>
-              <Button
-                variant="text"
-                color="info"
-                size="small"
-                onClick={() => scrollToSection('pricing')}
-              >
-                Pricing
-              </Button>
+             
               <Button
                 variant="text"
                 color="info"
