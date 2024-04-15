@@ -16,9 +16,6 @@ import config from '../../../config'
 function AppAppBar({ mode, toggleColorMode }) {
   const [open, setOpen] = React.useState(false);
 
-  const toggleDrawer = (newOpen) => () => {
-    setOpen(newOpen);
-  };
 
   const scrollToSection = (sectionId) => {
     const sectionElement = document.getElementById(sectionId);
@@ -40,15 +37,16 @@ function AppAppBar({ mode, toggleColorMode }) {
         sessionStorage.setItem('email', email);
         sessionStorage.setItem('name', name);
         //parte logica de la comprobacion de si es empleado o cliente
-       /* getEmpleados(email)
+       getEmpleados(email)
           .then((response) => {
             if (response.status === 500) 
               cerrarSesion();
-             else if (response.status === 200) 
+             else if (email === response.email) 
               // Es un empleado
               navigate("/HomeEmpleados");
              else {
-              postClientes(email).then((response) => {
+              console.log(response.status);
+              postClientes(email,name).then((response) => {
                 if (response.status === 500) 
                   cerrarSesion();
                  else 
@@ -57,8 +55,8 @@ function AppAppBar({ mode, toggleColorMode }) {
                 
               });
             }
-          });*/
-        navigate("/HomeClientes");
+          });
+        
     }
     const cerrarSesion = () => {
       googleLogout();

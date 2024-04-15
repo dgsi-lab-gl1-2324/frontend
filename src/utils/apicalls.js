@@ -5,9 +5,9 @@ export{
     getEmpleados
 }
 //TODO: implementar las llamadas a la API
-function postClientes(id) {
-    return API.post('/clientes/:'+{id}).then(({ data }) => data);
+function postClientes(email,name) {
+    return API.post('/clientes',  {email,name}).then(({ data }) => data);
 }
-function getEmpleados(id){
-    return API.get('/empleados/:'+{id}).then(({ data }) => data);
+function getEmpleados(email){
+    return API.get(`/empleados?email=${email}`).then(({ data }) => data);
 }
