@@ -20,7 +20,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" mt={1}>
       {'Copyright © '}
-      <Link href="https://mui.com/">Sitemark&nbsp;</Link>
+      <Link href="https://github.com/dgsi-lab-gl1-2324">DGSI&nbsp;</Link>
       {new Date().getFullYear()}
     </Typography>
   );
@@ -72,7 +72,7 @@ export default function Footer() {
         >
           <IconButton
             color="inherit"
-            href="https://github.com/mui"
+            href="https://github.com/dgsi-lab-gl1-2324/frontend"
             aria-label="GitHub"
             sx={{ alignSelf: 'center' }}
           >
@@ -80,7 +80,15 @@ export default function Footer() {
           </IconButton>
           <IconButton
             color="inherit"
-            href="https://twitter.com/MaterialUI"
+            href="https://github.com/dgsi-lab-gl1-2324/Backend"
+            aria-label="GitHub"
+            sx={{ alignSelf: 'center' }}
+          >
+            <FacebookIcon />
+          </IconButton>
+          <IconButton
+            color="inherit"
+            href="https://twitter.com/ogootoo"
             aria-label="X"
             sx={{ alignSelf: 'center' }}
           >
@@ -88,7 +96,7 @@ export default function Footer() {
           </IconButton>
           <IconButton
             color="inherit"
-            href="https://www.linkedin.com/company/mui/"
+            href="https://www.linkedin.com/in/%C3%B3scar-g%C3%B3mez-toledano-84a211274/"
             aria-label="LinkedIn"
             sx={{ alignSelf: 'center' }}
           >

@@ -21,7 +21,12 @@ function AppAppBar({ mode, toggleColorMode }) {
       sessionStorage.clear();
       navigate("/");
     }
-
+    const contratar = () => {
+      navigate("/HomeClientes/Contratar");
+    }
+    const contrataciones = () => {
+      navigate("/HomeClientes/Contrataciones");
+    }
   return (
     <AppBar
       position="fixed"
@@ -73,10 +78,10 @@ function AppAppBar({ mode, toggleColorMode }) {
               {sessionStorage.getItem('name')} 
             </Typography>
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Button>
+              <Button onClick={contratar}>
                 Contratar
               </Button>
-              <Button>
+              <Button onClick={contrataciones}>
                 Contrataciones
               </Button>
             </Box>
